@@ -1,0 +1,44 @@
+<div class="background">
+	<section class="text-center text-lg-start">
+		<div class="container py-4 bac caja-login" >
+		  <div class="row g-0 align-items-center">
+			<div class="col-lg-6 mb-5 mb-lg-0">
+			  <div class="card cascading-right" style="
+				  background: hsla(0, 0%, 100%, 0.55);
+				  backdrop-filter: blur(30px);
+				  ">
+				<div class="card-body p-5 shadow-5 text-center">
+				  <h2 class="fw-bold mb-5">Registro</h2>
+				  <form [formGroup]="formGroup" (ngSubmit)="registrarse()">
+					<div class="form-outline mb-4">
+					<label class="form-label" for="form3Example1">Email</label>
+					  <input type="email" id="form3Example1" class="form-control" formControlName="email" />
+						 <small class="invalid" *ngIf="formGroup.controls['email'].errors?.['required'] && formGroup.controls['email'].touched">El email es requerido</small>
+						<small class="invalid" *ngIf="formGroup.controls['email'].errors?.['email'] && formGroup.controls['email'].touched">El formato es invalido</small>
+					</div>
+					<div class="mb-3">
+						<label for="formFile" class="form-label">Perfil</label>
+						<select class="form-select" aria-label="Default select example" formControlName="perfil">
+							<option value="Empleado">Empleado</option>
+							<option value="admin">Admin</option>
+						</select>
+						<small class="invalid" *ngIf="formGroup.controls['perfil'].errors?.['required'] && formGroup.controls['perfil'].touched">Debe seleccionar un perfil.</small>
+					</div>
+
+					<div class="form-outline mb-4">
+					<label class="form-label" for="form3Example4">Contraseña</label>
+					  <input type="password" id="form3Example4" class="form-control"  formControlName="contraseña"/> 
+						  <small class="invalid" *ngIf="formGroup.controls['contraseña'].errors?.['required'] && formGroup.controls['contraseña'].touched">La contraseña es requerida</small>
+					</div>
+					<button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="formGroup.invalid">Registrar</button>
+					<div class="text-center">
+						<p>Ya tenes cuenta? <a routerLink="/login" class="link-info">Inicia Sesión</a></p>
+					</div>
+				  </form>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+	</div>

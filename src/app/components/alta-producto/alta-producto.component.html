@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="py-5 text-center">
+    <h2>Alta Producto</h2>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 order-md-2 mb-4">
+      <app-tabla-paises (eventoPaisSeleccionado)="cargarPaisSeleccionado($event)"></app-tabla-paises>
+    </div>
+
+
+    <div class="col-md-8 order-md-1">
+      <form class="needs-validation" [formGroup]="formGroup" (ngSubmit)="altaProducto()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">codigo</label>
+            <input type="text" class="form-control" id="firstName" formControlName="codigo">
+            <small class="invalid" *ngIf="formGroup.controls['codigo'].errors?.['required'] && formGroup.controls['codigo'].touched">El codigo es requerido</small>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="firstName">descripcion</label>
+            <input type="text" class="form-control" id="firstName" formControlName="descripcion">
+            <small class="invalid" *ngIf="formGroup.controls['descripcion'].errors?.['required'] && formGroup.controls['descripcion'].touched">la descripcion es requerido</small>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="edad">precio</label>
+          <input type="number" class="form-control" id="edad" formControlName="precio">
+          <small class="invalid" *ngIf="formGroup.controls['precio'].errors?.['required'] && formGroup.controls['precio'].touched">el precio es requerida</small>
+        </div>
+
+        <div class="mb-3">
+            <label for="edad">stock</label>
+            <input type="number" class="form-control" id="edad" formControlName="stock">
+            <small class="invalid" *ngIf="formGroup.controls['stock'].errors?.['required'] && formGroup.controls['stock'].touched">el stock es requerida</small>
+          </div>
+
+          <div class="mb-3">
+            <label for="formFile" class="form-label">comestible</label>
+            <select class="form-select" aria-label="Default select example" formControlName="comestible">
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+            <small class="invalid" *ngIf="formGroup.controls['comestible'].errors?.['required'] && formGroup.controls['comestible'].touched">Debe seleccionar una opcion.</small>
+        </div>
+
+          <div class="mb-3">
+            <label for="country">Pais</label>
+            <input type="text" readonly class="form-control" id="address2" formControlName="pais">
+          </div>
+        <hr class="mb-4">
+        <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="formGroup.invalid">Crear Producto</button>
+      </form>
+    </div>
+  </div>
