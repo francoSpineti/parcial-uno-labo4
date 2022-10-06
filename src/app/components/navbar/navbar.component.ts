@@ -9,7 +9,7 @@ import { UsuarioService } from 'src/app/services/usuario.service';
 export class NavbarComponent implements OnInit {
 
   estaLogueado !: boolean;
-  esAdmin !: boolean
+  esAdmin !: boolean;
   
   constructor(private usuarioService : UsuarioService) { 
     this.estaLogueado = this.usuarioService.estaLogueado();

@@ -27,8 +27,12 @@ export class UsuarioService {
   }
 
   isAdmin(){
+    let aux : boolean = false;
     let obj = JSON.parse(localStorage.getItem('user')!);
-    return obj.perfil === 'admin';
+    if(obj != null){
+        obj.perfil === 'admin' ? aux=true : aux;
+    }
+    return aux;
   }
 
   estaLogueado(){

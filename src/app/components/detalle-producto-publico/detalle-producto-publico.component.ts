@@ -12,6 +12,7 @@ export class DetalleProductoPublicoComponent implements OnInit {
   mostrarProductos : Array<Producto> = [];
 
   constructor(private service : ProductoService) {
+    alert('aaaa');
     this.mostrarProductos = [];
     this.service.obtenerProductos().forEach(element => {
       if(element.stock > 0){
