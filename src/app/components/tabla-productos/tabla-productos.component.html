@@ -1,0 +1,18 @@
+<h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-primary">Seleccione un Producto</span>
+  </h4>
+    
+  <div>
+    <ul class="list-group mb-3" >
+      <div >
+          <span class="text-muted">Listado de Productos</span>
+          <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let producto of listaProductos">
+          <button class="btn btn-light" (click)="seleccionarProductoEvento(producto)">
+            <div>
+              <h6 class="my-0">{{producto.codigo + ' ' + producto.descripcion}}</h6>
+            </div>
+          </button>
+        </li>
+      </div>
+    </ul>
+  </div>

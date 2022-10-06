@@ -16,6 +16,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { IngresoRoutingModule } from './components/ingreso/ingreso-routing.module';
 import { AltaProductoComponent } from './components/alta-producto/alta-producto.component';
 import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.component';
+import { DetalleProductoComponent } from './components/detalle-producto/detalle-producto.component';
+import { DetalleProductoPublicoComponent } from './components/detalle-producto-publico/detalle-producto-publico.component';
+import { TablaProductosComponent } from './components/tabla-productos/tabla-productos.component';
+import { ProductoSeleccionadoComponent } from './components/producto-seleccionado/producto-seleccionado.component';
+import { PaisSeleccionadoComponent } from './components/pais-seleccionado/pais-seleccionado.component';
 
 
 @NgModule({
@@ -24,7 +29,12 @@ import { TablaPaisesComponent } from './components/tabla-paises/tabla-paises.com
     BienvenidaComponent,
     NavbarComponent,
     AltaProductoComponent,
-    TablaPaisesComponent
+    TablaPaisesComponent,
+    DetalleProductoComponent,
+    DetalleProductoPublicoComponent,
+    TablaProductosComponent,
+    ProductoSeleccionadoComponent,
+    PaisSeleccionadoComponent
   ],
   imports: [
     BrowserModule,
