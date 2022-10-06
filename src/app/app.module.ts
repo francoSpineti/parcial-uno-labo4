@@ -21,6 +21,11 @@ import { DetalleProductoPublicoComponent } from './components/detalle-producto-p
 import { TablaProductosComponent } from './components/tabla-productos/tabla-productos.component';
 import { ProductoSeleccionadoComponent } from './components/producto-seleccionado/producto-seleccionado.component';
 import { PaisSeleccionadoComponent } from './components/pais-seleccionado/pais-seleccionado.component';
+import { ContainersComponent } from './components/containers/containers.component';
+import { AltaContainerComponent } from './components/alta-container/alta-container.component';
+import { ModificarContainerComponent } from './components/modificar-container/modificar-container.component';
+import { BorrarContainerComponent } from './components/borrar-container/borrar-container.component';
+import { ListadorContainerComponent } from './components/listador-container/listador-container.component';
 
 
 @NgModule({
@@ -34,7 +39,12 @@ import { PaisSeleccionadoComponent } from './components/pais-seleccionado/pais-s
     DetalleProductoPublicoComponent,
     TablaProductosComponent,
     ProductoSeleccionadoComponent,
-    PaisSeleccionadoComponent
+    PaisSeleccionadoComponent,
+    ContainersComponent,
+    AltaContainerComponent,
+    ModificarContainerComponent,
+    BorrarContainerComponent,
+    ListadorContainerComponent
   ],
   imports: [
     BrowserModule,

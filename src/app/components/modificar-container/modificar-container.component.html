@@ -1,0 +1,29 @@
+<div class="card mb-4 rounded-3 shadow-sm">
+    <div class="card-header py-3">
+      <h4 class="my-0 fw-normal">Modificar</h4>
+    </div>
+    <div class="card-body">
+     
+      <form class="needs-validation" [formGroup]="formGroup" (ngSubmit)="modificar()">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">color</label>
+            <input type="text" class="form-control" id="firstName" formControlName="color">
+            <small class="invalid" *ngIf="formGroup.controls['color'].errors?.['required'] && formGroup.controls['color'].touched">El color es requerido</small>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="firstName">empresa</label>
+          <input type="text" class="form-control" id="firstName" formControlName="empresa">
+          <small class="invalid" *ngIf="formGroup.controls['empresa'].errors?.['required'] && formGroup.controls['empresa'].touched">la empresa es requerido</small>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="firstName">capacidad</label>
+          <input type="text" class="form-control" id="firstName" formControlName="capacidad">
+          <small class="invalid" *ngIf="formGroup.controls['capacidad'].errors?.['required'] && formGroup.controls['capacidad'].touched">la capacidad es requerido</small>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" type="submit" [disabled]="formGroup.invalid">Modificar</button>
+      </form>
+
+    </div>
+  </div>

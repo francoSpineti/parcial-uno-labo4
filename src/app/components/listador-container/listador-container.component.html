@@ -1,0 +1,14 @@
+  <div>
+    <ul class="list-group mb-3" >
+      <div >
+          <span class="text-muted">Listado de Containers</span>
+          <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let obj of containers">
+          <button class="btn btn-light" (click)="seleccionarContainerEvento(obj)">
+            <div>
+              <h6 class="my-0">{{obj.codigo + ' ' + obj.color}}</h6>
+            </div>
+          </button>
+        </li>
+      </div>
+    </ul>
+  </div>

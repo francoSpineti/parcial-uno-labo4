@@ -10,13 +10,16 @@
             <a class="nav-link active" aria-current="page" routerLink="/bienvenido" >Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/altaProducto" *ngIf="estaLogueado">Alta Producto</a>
+            <a class="nav-link active" aria-current="page" routerLink="/altaProducto" *ngIf="estaLogueado && !esAdmin">Alta Producto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/detalleProducto" *ngIf="estaLogueado">Detalle Producto</a>
+            <a class="nav-link active" aria-current="page" routerLink="/detalleProducto" *ngIf="estaLogueado && !esAdmin">Detalle Producto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="/detalleProductoPublicos">Detalle Productos Publicos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/containers" *ngIf="estaLogueado && esAdmin">Containers</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" routerLink="/ingreso/login" *ngIf="!estaLogueado">Login</a>
